@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import {Wrapper} from './Components/Profile/exemplo'
+import Layout from "./Components/Layout";
+import Profile from "./Components/Profile";
+import ResetCss from "./Global/resetCss";
+
 
 function App() {
+ 
+  const Button = styled.button`
+  background-color: red
+  `;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <main>
+         <ResetCss/>
+         <Layout>
+            <Profile/>
+            <div>Reporitories</div>
+            <div>Starreds</div>
+         </Layout>
+       </main>
+    </>
   );
 }
 
 export default App;
+
